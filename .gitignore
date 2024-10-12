@@ -1,0 +1,11 @@
+*.pyc
+*.jpg
+*.pth
+events.out.*
+*.log
+*.json
+*.txt
+*.sh
+*.pth
+*.png
+*.jpg
