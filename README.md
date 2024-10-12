@@ -45,7 +45,7 @@ Dataset/
 ```
 The "client_n.txt" file contain the file paths of all images from one client.
 
-The dataset for evaluation can be downloaded here:
+The dataset for evaluation can be downloaded here ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/Eq8-r8_PIa1JjdsxkzgXjfYBJ2JeMa6JJEpLjwwICwiWeA?e=NHQPiB))
 
 
 ### :wrench: Generate augmented dataset
@@ -56,7 +56,7 @@ python util/scan_mode_convert.py
 ```
 
 ### :zap: Quick start with checkpoints
-We provid pretrained and finetuned checkpoints of UltraFedFM (Dropbox), which can be put in the output_dir/ folder for further development. 
+We provid pretrained and finetuned checkpoints of UltraFedFM ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/ErEPqzsR_3ZLr3Q18htiG5QBEFYtO0zgMb2OzxNITg6aqw?e=xEE7eB)), which can be put in the output_dir/ folder for further development. 
 
 
 ### :rocket: Pre-training
