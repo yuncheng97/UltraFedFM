@@ -9,3 +9,4 @@ events.out.*
 *.pth
 *.png
 *.jpg
+*.safetensors
