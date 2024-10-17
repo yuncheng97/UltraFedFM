@@ -45,7 +45,7 @@ Dataset/
 ```
 The "client_n.txt" file contain the file paths of all images from one client.
 
-The dataset for evaluation can be downloaded here ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/Eq8-r8_PIa1JjdsxkzgXjfYBJ2JeMa6JJEpLjwwICwiWeA?e=NHQPiB))
+The toy datasets for pre-training and evaluation can be downloaded here ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/Eq8-r8_PIa1JjdsxkzgXjfYBJ2JeMa6JJEpLjwwICwiWeA?e=NHQPiB))
 
 
 ### :wrench: Generate augmented dataset
