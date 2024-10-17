@@ -8,7 +8,10 @@ events.out.*
 *.sh
 *.pth
 # *.png
-/dataset/
+/dataset/toy_diagnosis/
+/dataset/toy_multi_segmentation/
+/dataset/toy_pretrain/
+/dataset/toy_segmentation/
 # *.jpg
 *.safetensors
 *.tar
