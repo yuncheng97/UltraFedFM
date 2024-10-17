@@ -178,7 +178,7 @@ class DatasetFLPretrain(data.Dataset):
         """
         # breakpoint()
         index = index % len(self.img_paths)
-        path =  self.img_paths[index]
+        path =  os.path.join(self.args.data_path, self.img_paths[index])
         
         # label = self.labels[index]
         # label = list({float(i) for i in label.split(',')})
