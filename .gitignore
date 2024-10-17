@@ -5,7 +5,7 @@ events.out.*
 *.log
 *.json
 *.txt
-*.sh
+# *.sh
 *.pth
 # *.png
 /dataset/toy_diagnosis/
