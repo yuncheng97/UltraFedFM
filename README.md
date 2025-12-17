@@ -1,10 +1,27 @@
 # UltraFedFM
-## [Privacy-Preserving Federated Foundation Model for Generalist Ultrasound Artificial Intelligence]()
+## [From pretraining to privacy: federated ultrasound foundation model with self-supervised learning]()
 
-UltraFedFM is an innovative privacy-preserving foundation model collaboratively pre-trained via federated learning with multi-modal & multi-center & multi-organ ultrasound datasets, aiming for efficient adaptation on downstream diagnosis and segmentation tasks.
 
+[![Arxiv](https://img.shields.io/badge/arXiv-2305.17100-B21A1B)](https://arxiv.org/abs/2411.16380)
+
+
+UltraFedFM is a privacy-preserving federated foundation model designed for generalist ultrasound intelligence. It enables collaborative pre-training across multiple institutions without data sharing, and supports efficient adaptation to diverse downstream ultrasound tasks including diagnosis and segmentation.
 ### :sparkles: A Quick Overview
 ![framework](./asset/UltraFedFM.png) 
+
+🔑 **Key Features**
+
+🔒 **Federated Learning for Privacy Preservation**
+
+Multi-center collaborative pre-training without sharing raw ultrasound data.
+
+🧠 **Foundation Model for Ultrasound**
+
+A generalist backbone supporting multi-organ, multi-task, and multi-modal ultrasound applications.
+
+⚡**Efficient Downstream Adaptation**
+
+Ready-to-use fine-tuning and evaluation pipelines for diagnosis and segmentation tasks.
 
 ### :mag: Installation
 1. Clone this repository and navigate to the BiomedGPT folder
@@ -21,7 +38,7 @@ conda env create -f environment.yaml
 conda activate UltraFedFM
 ```
 
-### :file_folder: Prepare dataset
+### :file_folder: Data Preparation
 For Pre-training and fine-tuning stages, download the public datasets provided by the links in "Data availability" section or prepare your own datassets. Then structure the datasets file folders, you can follow the directory setting below: 
 ```
 Dataset/
@@ -43,10 +60,9 @@ Dataset/
 │   │   └── ...
 └── ...
 ```
-The "client_n.txt" file contain the file paths of all images from one client.
+Each line in `client_n.txt` corresponds to a single ultrasound image.
 
-The toy datasets for pre-training and evaluation can be downloaded here ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/Eq8-r8_PIa1JjdsxkzgXjfYBJ2JeMa6JJEpLjwwICwiWeA?e=NHQPiB))
-
+Images should be stored under `Dataset/Pretrain/train/`.
 
 ### :wrench: Generate augmented dataset
 Generate the augmented dataset by *adaptive scanning model augmentation*, Please noted that you need to specify each image as "linear" or "convex". The generated images should put in the ./Pretrain/train/ folder. Then the image paths of the augmented client dataset should add in the "client_n.txt" file of the original client dataset.
@@ -62,7 +78,7 @@ We provid pretrained and finetuned checkpoints of UltraFedFM ([Onedrive](https:/
 ### :rocket: Pre-training
 
 ```shell
-    bash scripts/pretrain.sh
+bash scripts/pretrain.sh
 ```
 
 ### :mortar_board: Downstreams
@@ -104,4 +120,15 @@ This code of repository is built on [MAE](https://github.com/facebookresearch/ma
 
 ## :book: Citation
 
+```bibtex
+@article{jiang2025pretraining,
+  title={From pretraining to privacy: federated ultrasound foundation model with self-supervised learning},
+  author={Jiang, Yuncheng and Feng, Chun-Mei and Ren, Jinke and Wei, Jun and Zhang, Zixun and Hu, Yiwen and Liu, Yunbi and Sun, Rui and Tang, Xuemei and Du, Juan and others},
+  journal={npj Digital Medicine},
+  volume={8},
+  number={1},
+  pages={714},
+  year={2025},
+  publisher={Nature Publishing Group UK London}
+}
 
