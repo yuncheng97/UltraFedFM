@@ -72,8 +72,8 @@ python util/scan_mode_convert.py
 ```
 
 ### :zap: Quick start with checkpoints
-We provid pretrained and finetuned checkpoints of UltraFedFM ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/ErEPqzsR_3ZLr3Q18htiG5QBEFYtO0zgMb2OzxNITg6aqw?e=xEE7eB)), which can be put in the output_dir/ folder for further development. 
-
+<!-- We provid pretrained and finetuned checkpoints of UltraFedFM ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/ErEPqzsR_3ZLr3Q18htiG5QBEFYtO0zgMb2OzxNITg6aqw?e=xEE7eB)), which can be put in the output_dir/ folder for further development.  -->
+We provid pretrained and finetuned checkpoints of UltraFedFM ([百度网盘](https://pan.baidu.com/s/1GXxbuRg9XcYHruMWU0M6EQ?pwd=v74x))（提取码：v74x）， which can be put in the output_dir/ folder for further development. 
 
 ### :rocket: Pre-training
 
