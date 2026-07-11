@@ -1,13 +1,14 @@
 # UltraFedFM
-## [From pretraining to privacy: federated ultrasound foundation model with self-supervised learning]()
 
+## [From pretraining to privacy: federated ultrasound foundation model with self-supervised learning]()
 
 [![Arxiv](https://img.shields.io/badge/arXiv-2305.17100-B21A1B)](https://arxiv.org/abs/2411.16380)
 
-
 UltraFedFM is a privacy-preserving federated foundation model designed for generalist ultrasound intelligence. It enables collaborative pre-training across multiple institutions without data sharing, and supports efficient adaptation to diverse downstream ultrasound tasks including diagnosis and segmentation.
-### :sparkles: A Quick Overview
-![framework](./asset/UltraFedFM.png) 
+
+### ✨ A Quick Overview
+
+![framework](./asset/UltraFedFM.png)
 
 🔑 **Key Features**
 
@@ -23,8 +24,10 @@ A generalist backbone supporting multi-organ, multi-task, and multi-modal ultras
 
 Ready-to-use fine-tuning and evaluation pipelines for diagnosis and segmentation tasks.
 
-### :mag: Installation
+### 🔍 Installation
+
 1. Clone this repository and navigate to the BiomedGPT folder
+
 ```shell
 # clone project
 git clone https://github.com/yuncheng97/UltraFedFM.git
@@ -32,14 +35,17 @@ cd UltraFedFM/
 ```
 
 2. Install required packages
+
 ```shell
 # create conda environment and install dependencies
 conda env create -f environment.yaml
 conda activate UltraFedFM
 ```
 
-### :file_folder: Data Preparation
-For Pre-training and fine-tuning stages, download the public datasets provided by the links in "Data availability" section or prepare your own datassets. Then structure the datasets file folders, you can follow the directory setting below: 
+### 📁 Data Preparation
+
+For Pre-training and fine-tuning stages, download the public datasets provided by the links in "Data availability" section or prepare your own datassets. Then structure the datasets file folders, you can follow the directory setting below:
+
 ```
 Dataset/
 ├── Pretrain/
@@ -60,29 +66,35 @@ Dataset/
 │   │   └── ...
 └── ...
 ```
+
 Each line in `client_n.txt` corresponds to a single ultrasound image.
 
 Images should be stored under `Dataset/Pretrain/train/`.
 
-### :wrench: Generate augmented dataset
+### 🔧 Generate augmented dataset
+
 Generate the augmented dataset by *adaptive scanning model augmentation*, Please noted that you need to specify each image as "linear" or "convex". The generated images should put in the ./Pretrain/train/ folder. Then the image paths of the augmented client dataset should add in the "client_n.txt" file of the original client dataset.
 
 ```shell
 python util/scan_mode_convert.py
 ```
 
-### :zap: Quick start with checkpoints
-<!-- We provid pretrained and finetuned checkpoints of UltraFedFM ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/ErEPqzsR_3ZLr3Q18htiG5QBEFYtO0zgMb2OzxNITg6aqw?e=xEE7eB)), which can be put in the output_dir/ folder for further development.  -->
-We provid pretrained checkpoints of UltraFedFM ([百度网盘](https://pan.baidu.com/s/1GXxbuRg9XcYHruMWU0M6EQ?pwd=v74x))（提取码：v74x）/([Google Drive](https://drive.google.com/file/d/13cczqVFk84c_9QDP2OLURU1jWryCky5f/view?usp=drive_link))， which can be put in the output_dir/ folder for further development. 
+### ⚡️ Quick start with checkpoints
 
-### :rocket: Pre-training
+<!-- We provid pretrained and finetuned checkpoints of UltraFedFM ([Onedrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/220019054_link_cuhk_edu_cn/ErEPqzsR_3ZLr3Q18htiG5QBEFYtO0zgMb2OzxNITg6aqw?e=xEE7eB)), which can be put in the output_dir/ folder for further development.  -->
+
+We provid pretrained checkpoints of UltraFedFM ([百度网盘](https://pan.baidu.com/s/1GXxbuRg9XcYHruMWU0M6EQ?pwd=v74x))（提取码：v74x）/[Google Drive](https://drive.google.com/file/d/13cczqVFk84c_9QDP2OLURU1jWryCky5f/view?usp=drive_link)/[OneDrive](https://cuhko365-my.sharepoint.com/:f:/g/personal/lizhen_cuhk_edu_cn/IgBg-lwphPnvS77U8wwFYJKSAWBtZSudA8YBxCjwhJCQurU?e=djYSls&xsdata=MDV8MDJ8bGl6aGVuQGN1aGsuZWR1LmNufDMwNDk3NzIwYmUzOTRhODZmY2EwMDhkZWRkZjE2NDJhfGU1ODk4YjdhOWM4NzRhNGJiMjJhMmRmM2YzNTVlMDFlfDB8MHw2MzkxOTIyMjYwMjQ0OTg3NDB8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpGYlhCMGVVMWhjR2tpT25SeWRXVXNJbFlpT2lJd0xqQXVNREF3TUNJc0lsQWlPaUpYYVc0ek1pSXNJa0ZPSWpvaVRXRnBiQ0lzSWxkVUlqb3lmUT09fDB8fHw%3d&sdata=bE4xZ3V1TEJDNW84RjlBeHhsSG83QVMvNlM3bFR5VVJVaVlMMVJOaDZybz0%3d)， which can be put in the output_dir/ folder for further development.
+
+### 🚀 Pre-training
 
 ```shell
 bash scripts/pretrain.sh
 ```
 
-### :mortar_board: Downstreams
+### 🎓 Downstreams
+
 We provide the run scripts of fine-tuning and inference. There will be log files during execution. please refer to
+
 <details>
     <summary><b>Ultrasound Image Diagnosis</b></summary>
 <pre>
@@ -115,10 +127,11 @@ bash scripts/plot_multi_segmentation.sh
 </pre>
 </details>
 
-## :pray: Acknowledgement
+## 🙏 Acknowledgement
+
 This code of repository is built on [MAE](https://github.com/facebookresearch/mae) and [SSL-FL](https://github.com/rui-yan/SSL-FL). Thanks for their valuble contributions.
 
-## :book: Citation
+## 📖 Citation
 
 ```bibtex
 @article{jiang2025pretraining,
@@ -132,3 +145,4 @@ This code of repository is built on [MAE](https://github.com/facebookresearch/ma
   publisher={Nature Publishing Group UK London}
 }
 
+```
